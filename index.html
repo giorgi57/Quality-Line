@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remontos | პრემიუმ რემონტი</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><i class="fas fa-mountain"></i> Quality<span>Line</span></div>
+            <ul class="nav-links">
+                <li><a href="#">მთავარი</a></li>
+                <li><a href="#services">სერვისები</a></li>
+                <li><a href="#portfolio">პორტფოლიო</a></li>
+                <li><a href="#contact">კონტაქტი</a></li>
+            </ul>
+            <div class="nav-right">
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="tel:+995555000000" class="btn-nav"><i class="fas fa-phone"></i></a>
+                <a href="#" class="btn-consult">კონსულტაცია</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <header class="hero-card">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="tag"><i class="fas fa-check"></i> საუკეთესო ხარისხი</span>
+                    <h1>ბინის რემონტის <br> ახალი სტანდარტი</h1>
+                    <p>პროფესიონალური გუნდი, რომელიც ზრუნავს თქვენს კომფორტზე. ინტერიერის დიზაინი და სრული რემონტი.</p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn-black">პროექტები <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://wa.me/995555000000" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000" alt="ინტერიერი">
+                    <div class="image-label"></div>
+                </div>
+            </div>
+        </header>
+
+        <section id="services" class="section-container">
+            <h2 class="section-title">ჩვენი სერვისები</h2>
+            <div class="services-grid">
+                <div class="s-card" onclick="openModal('service1')">
+                    <i class="far fa-lightbulb"></i>
+                    <h3>კონცეფცია & დიზაინი</h3>
+                    <p>იდეიდან ვიზუალიზაციამდე</p>
+                </div>
+                <div class="s-card" onclick="openModal('service2')">
+                    <i class="fas fa-hard-hat"></i>
+                    <h3>შავი კარკასი</h3>
+                    <p>მყარი ფუნდამენტი თქვენთვის</p>
+                </div>
+                <div class="s-card" onclick="openModal('service3')">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3>სრული რემონტი</h3>
+                    <p>გასაღების ჩაბარებით</p>
+                </div>
+                <div class="s-card" onclick="openModal('service4')">
+                    <i class="fas fa-search-plus"></i>
+                    <h3>ზედამხედველობა</h3>
+                    <p>ხარისხის კონტროლი</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section-container">
+            <h2 class="section-title">პორტფოლიო</h2>
+            <div class="portfolio-grid">
+                <div class="p-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="1">
+                    <div class="p-info"><span>მისაღები ოთახი</span> <button>ნახვა</button></div>
+                </div>
+                <div class="p-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="2">
+                    <div class="p-info"><span>სამზარეულო</span> <button>ნახვა</button></div>
+                </div>
+                <div class="p-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="3">
+                    <div class="p-info"><span>სააბაზანო</span> <button>ნახვა</button></div>
+                </div>
+                <div class="p-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="4">
+                    <div class="p-info"><span>საძინებელი</span> <button>ნახვა</button></div>
+                </div>
+                <div class="p-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="4">
+                    <div class="p-info"><span>საძინებელი</span> <button>ნახვა</button></div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact" class="footer-card">
+            <div class="footer-grid">
+                <div class="f-brand">
+                    <div class="logo"><i class="fas fa-mountain"></i> Quality<span>line</span></div>
+                    <p>თქვენი ნდობა ჩვენი მთავარი მოტივაციაა.</p>
+                </div>
+                <div class="f-links">
+                    <h4>კონტაქტი</h4>
+                    <p>info@remontos.ge</p>
+                    <p>+995 555 00 00 00</p>
+                    <p>ქუთაისი, საქართველო</p>
+                </div>
+                <div class="f-social">
+                    <h4>მოგვყევით</h4>
+                    <div class="social-btns">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="f-bottom">© 2026 Quality</span> line</span></div>
+        </footer>
+    </div>
+
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
