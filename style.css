@@ -89,9 +89,43 @@ body { background: var(--bg); color: var(--text); transition: 0.3s; padding-top:
 .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 3000; justify-content: center; align-items: center; }
 .lightbox img { max-width: 85%; max-height: 85%; border-radius: 10px; }
 
+/* ბურგერ მენიუს სტილები მობილურისთვის */
 @media (max-width: 768px) {
+    .burger-menu {
+        display: block !important; /* გამოვაჩინოთ ღილაკი */
+        color: var(--primary);
+    }
+
+    .nav-links {
+        display: flex !important; /* display: none-ის ნაცვლად */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%; /* ეკრანის გარეთ */
+        width: 70%;
+        height: 100vh;
+        background: var(--card);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding: 80px 30px;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        gap: 30px;
+    }
+
+    /* როცა მენიუ გახსნილია */
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    .hero-text h1 { font-size: 28px; }
     .hero-text { padding: 30px; text-align: center; }
     .hero-actions { display: flex; flex-direction: column; gap: 10px; }
     .btn-wa-main { margin-left: 0; }
-    .nav-links { display: none; }
 }
