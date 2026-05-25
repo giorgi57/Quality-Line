@@ -3,116 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>ხელოსნები ქუთაისში - Quality Line | პრემიუმ რემონტი</title>
-    <meta name="description" content="პროფესიონალი ხელოსნები ქუთაისში. ბინების და ოფისების პრემიუმ რემონტი, ელექტროობა და სანტექნიკა. Quality Line - ხარისხი და ნდობა.">
+    <title data-i18n="meta_title">ხელოსნები ქუთაისში - Quality Line | პრემიუმ რემონტი</title>
+    <meta name="description" data-i18n-attr="content" data-i18n="meta_desc" content="პროფესიონალი ხელოსნები ქუთაისში. ბინების და ოფისების პრემიუმ რემონტი, ელექტროობა და სანტექნიკა. Quality Line - ხარისხი და ნდობა.">
     <meta name="keywords" content="ხელოსნები ქუთაისში, xelosnebi qutaishi, რემონტი ქუთაისში, remonti qutaishi, ხელოსანი, ბინის რემონტი, QualityLine">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-    <div class="container">
-        <div class="logo"><i class="fas fa-hammer"></i> Quality<span>Line</span></div>
-        
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#">მთავარი</a></li>
-            <li><a href="#services">სერვისები</a></li>
-            <li><a href="#pricing">ფასები</a></li>
-            <li><a href="#portfolio">ნამუშევრები</a></li>
-            <li><a href="#contact">კონტაქტი</a></li>
-        </ul>
-        
-        <div class="nav-right" style="display: flex; align-items: center; gap: 15px;">
-            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-            <div class="burger-menu" id="burger-toggle" style="display: none; cursor: pointer; font-size: 24px;">
-                <i class="fas fa-bars"></i>
+        <div class="container">
+            <div class="logo"><i class="fas fa-hammer"></i> Quality<span>Line</span></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" data-i18n="nav_home">მთავარი</a></li>
+                <li><a href="#services" data-i18n="nav_services">სერვისები</a></li>
+                <li><a href="#portfolio" data-i18n="nav_portfolio">ნამუშევრები</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">კონტაქტი</a></li>
+            </ul>
+            <div class="nav-right" style="display: flex; align-items: center; gap: 15px;">
+                <div class="lang-switcher" id="lang-switcher">
+                    <button class="lang-btn active" data-lang="ka">ქარ</button>
+                    <button class="lang-btn" data-lang="ru">Рус</button>
+                    <button class="lang-btn" data-lang="en">Eng</button>
+                </div>
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <div class="burger-menu" id="burger-toggle" style="display: none; cursor: pointer; font-size: 24px;">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <div class="main-wrapper">
         <header class="hero-card">
             <div class="hero-content">
                 <div class="hero-text">
-                    <span class="tag">პრემიუმ ხარისხი</span>
-                    <h1>თქვენი ოცნების რემონტი <br> იწყება აქ</h1>
-                    <p>პროფესიონალური გუნდი, რომელიც ზრუნავს თქვენს კომფორტზე. ინტერიერის დიზაინი და სრული რემონტი გასაღების ჩაბარებით.</p>
+                    <span class="tag" data-i18n="hero_tag">პრემიუმ ხარისხი</span>
+                    <h1 data-i18n="hero_title">თქვენი ოცნების რემონტი <br> იწყება აქ</h1>
+                    <p data-i18n="hero_desc">პროფესიონალური გუნდი, რომელიც ზრუნავს თქვენს კომფორტზე. ინტერიერის დიზაინი და სრული რემონტი გასაღების ჩაბარებით.</p>
                     <div class="hero-actions">
-                        <a href="#portfolio" class="btn-main">პროექტების ნახვა</a>
+                        <a href="#portfolio" class="btn-main" data-i18n="hero_btn_portfolio">პროექტების ნახვა</a>
                         <a href="https://wa.me/995555000000" class="btn-wa-main"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000" alt="ინტერიერი">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000" alt="Interior">
                 </div>
             </div>
         </header>
 
         <section id="services" class="section-container">
-            <h2 class="section-title">ჩვენი სერვისები</h2>
+            <h2 class="section-title" data-i18n="services_title">ჩვენი სერვისები</h2>
             <div class="services-grid">
                 <div class="s-card" onclick="openModal('service1')">
                     <i class="far fa-lightbulb"></i>
-                    <h3>კონცეფცია & დიზაინი</h3>
-                    <p>იდეიდან ვიზუალიზაციამდე</p>
-                    <div class="extra-info">+ უფასო ზომვა</div>
+                    <h3 data-i18n="svc1_title">კონცეფცია & დიზაინი</h3>
+                    <p data-i18n="svc1_sub">იდეიდან ვიზუალიზაციამდე</p>
+                    <div class="extra-info" data-i18n="svc1_extra">+ უფასო ზომვა</div>
                 </div>
                 <div class="s-card" onclick="openModal('service2')">
                     <i class="fas fa-hard-hat"></i>
-                    <h3>შავი კარკასი</h3>
-                    <p>მყარი ფუნდამენტი</p>
-                    <div class="extra-info">საუკეთესო მასალა</div>
+                    <h3 data-i18n="svc2_title">შავი კარკასი</h3>
+                    <p data-i18n="svc2_sub">მყარი ფუნდამენტი</p>
+                    <div class="extra-info" data-i18n="svc2_extra">საუკეთესო მასალა</div>
                 </div>
                 <div class="s-card" onclick="openModal('service3')">
                     <i class="fas fa-paint-roller"></i>
-                    <h3>სრული რემონტი</h3>
-                    <p>გასაღების ჩაბარებით</p>
-                    <div class="extra-info">გარანტია 5 წელი</div>
+                    <h3 data-i18n="svc3_title">სრული რემონტი</h3>
+                    <p data-i18n="svc3_sub">გასაღების ჩაბარებით</p>
+                    <div class="extra-info">!</div>
                 </div>
                 <div class="s-card" onclick="openModal('service4')">
                     <i class="fas fa-search-plus"></i>
-                    <h3>ზედამხედველობა</h3>
-                    <p>ხარისხის კონტროლი</p>
-                    <div class="extra-info">24/7 მონიტორინგი</div>
+                    <h3 data-i18n="svc4_title">ზედამხედველობა</h3>
+                    <p data-i18n="svc4_sub">ხარისხის კონტროლი</p>
+                    <div class="extra-info" data-i18n="svc4_extra">24/7 მონიტორინგი</div>
                 </div>
             </div>
         </section>
 
         <section id="pricing" class="section-container">
-            <h2 class="section-title">მომსახურების ფასები (მ²)</h2>
+            <h2 class="section-title" data-i18n="pricing_title">მომსახურება</h2>
             <div class="pricing-grid">
-                <div class="price-item"><span>გიფსოკარდონი</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>კაფელ-მეტლახი</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>შპაკლი / სამღებრო</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>ლამინატის დაგება</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>ელექტროობა (წერტილი)</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>სანტექნიკა</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>******</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>******</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>******</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>******</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>******</span> <strong> ₾</strong></div>
-                <div class="price-item"><span>******</span> <strong> ₾</strong></div>
+                <div class="price-item"><span data-i18n="p1">გიბსოკარდონი</span> <strong>📐</strong></div>
+                <div class="price-item"><span data-i18n="p2">კაფელ-მეტლახი</span> <strong>⬜</strong></div>
+                <div class="price-item"><span data-i18n="p3">შპაკლი / სამღებრო</span> <strong>🎨</strong></div>
+                <div class="price-item"><span data-i18n="p4">ლამინატი</span> <strong>🪵</strong></div>
+                <div class="price-item"><span data-i18n="p5">ელექტროობა</span> <strong>💡</strong></div>
+                <div class="price-item"><span data-i18n="p6">სანტექნიკა</span> <strong>🚰</strong></div>
+                <div class="price-item"><span data-i18n="p7">გათბობა</span> <strong>🌡️</strong></div>
+                <div class="price-item"><span data-i18n="p8">შპალერი</span> <strong>📜</strong></div>
+                <div class="price-item"><span data-i18n="p9">გასაჭიმი ჭერი</span> <strong>₾</strong></div>
+                <div class="price-item"><span>******</span> <strong>₾</strong></div>
+                <div class="price-item"><span data-i18n="p11">დემონტაჟი</span> <strong>🔨</strong></div>
+                <div class="price-item"><span>******</span> <strong>₾</strong></div>
             </div>
         </section>
 
         <section id="portfolio" class="section-container">
-            <h2 class="section-title">შესრულებული ნამუშევრები</h2>
+            <h2 class="section-title" data-i18n="portfolio_title">შესრულებული ნამუშევრები</h2>
             <div class="portfolio-filters">
-                <button class="filter-btn active" onclick="filterPortfolio('all', this)">ყველა</button>
-                <button class="filter-btn" onclick="filterPortfolio('living', this)">მისაღები</button>
-                <button class="filter-btn" onclick="filterPortfolio('kitchen', this)">სამზარეულო</button>
-                <button class="filter-btn" onclick="filterPortfolio('bath', this)">სააბაზანო</button>
+                <button class="filter-btn active" onclick="filterPortfolio('all', this)" data-i18n="filter_all">ყველა</button>
+                <button class="filter-btn" onclick="filterPortfolio('living', this)" data-i18n="filter_living">მისაღები</button>
+                <button class="filter-btn" onclick="filterPortfolio('kitchen', this)" data-i18n="filter_kitchen">სამზარეულო</button>
+                <button class="filter-btn" onclick="filterPortfolio('bath', this)" data-i18n="filter_bath">სააბაზანო</button>
+                <button class="filter-btn" onclick="filterPortfolio('bedroom', this)" data-i18n="filter_bedroom">საძინებელი</button>
             </div>
             <div class="portfolio-grid-modern">
-                <div class="p-card living" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="1"><div class="p-overlay"><span>მისაღები</span></div></div>
-                <div class="p-card kitchen" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600" alt="2"><div class="p-overlay"><span>სამზარეულო</span></div></div>
-                <div class="p-card bath" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600" alt="3"><div class="p-overlay"><span>სააბაზანო</span></div></div>
-                <div class="p-card living" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600" alt="4"><div class="p-overlay"><span>საძინებელი</span></div></div>
+                <div class="p-card living" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="Living"><div class="p-overlay"><span data-i18n="filter_living">მისაღები</span></div></div>
+                <div class="p-card kitchen" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600" alt="Kitchen"><div class="p-overlay"><span data-i18n="filter_kitchen">სამზარეულო</span></div></div>
+                <div class="p-card bath" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600" alt="Bath"><div class="p-overlay"><span data-i18n="filter_bath">სააბაზანო</span></div></div>
+                <div class="p-card bedroom" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600" alt="Bedroom"><div class="p-overlay"><span data-i18n="filter_bedroom">საძინებელი</span></div></div>
             </div>
         </section>
 
@@ -120,25 +121,25 @@
             <div class="footer-container">
                 <div class="footer-col">
                     <div class="logo">Quality<span>Line</span></div>
-                    <p>ჩვენი მიზანია შევქმნათ გარემო, სადაც თავს ბედნიერად იგრძნობთ.</p>
+                    <p data-i18n="footer_slogan">ჩვენი მიზანია შევქმნათ გარემო, სადაც თავს ბედნიერად იგრძნობთ.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>სწრაფი ლინკები</h4>
+                    <h4 data-i18n="footer_links">სწრაფი ლინკები</h4>
                     <ul>
-                        <li><a href="#">მთავარი</a></li>
-                        <li><a href="#services">სერვისები</a></li>
-                        <li><a href="#portfolio">პორტფოლიო</a></li>
+                        <li><a href="#" data-i18n="nav_home">მთავარი</a></li>
+                        <li><a href="#services" data-i18n="nav_services">სერვისები</a></li>
+                        <li><a href="#portfolio" data-i18n="nav_portfolio">პორტფოლიო</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>კონტაქტი</h4>
+                    <h4 data-i18n="nav_contact">კონტაქტი</h4>
                     <p><i class="fas fa-phone"></i> +995 555 00 00 00</p>
                     <p><i class="fas fa-phone"></i> +995 555 00 00 00</p>
                     <p><i class="fas fa-envelope"></i> info@qualityline.ge</p>
-                    <p><i class="fas fa-map-marker-alt"></i> ქუთაისი, საქართველო</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_city">ქუთაისი, საქართველო</span></p>
                 </div>
                 <div class="footer-col">
-                    <h4>მოგვყევით</h4>
+                    <h4 data-i18n="footer_follow">მოგვყევით</h4>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -146,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">© 2026 Quality Line - ყველა უფლება დაცულია</div>
+            <div class="footer-bottom">© 2026 Quality Line</div>
         </footer>
     </div>
 
@@ -161,6 +162,7 @@
 
     <div id="lightbox" class="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" src=""></div>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

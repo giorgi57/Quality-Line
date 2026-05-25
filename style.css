@@ -26,7 +26,27 @@ body { background: var(--bg); color: var(--text); transition: 0.3s; padding-top:
 .logo span { color: var(--accent); }
 .nav-links { list-style: none; display: flex; gap: 20px; }
 .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 14px; }
-.btn-consult { background: var(--accent); color: white; padding: 10px 18px; border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: bold; }
+
+/* Language Switcher */
+.lang-switcher { display: flex; gap: 4px; align-items: center; }
+.lang-btn {
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 4px 9px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text);
+    transition: 0.2s;
+    line-height: 1.4;
+}
+.lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+.lang-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* Theme toggle */
+#theme-toggle { background: none; border: 1px solid #ccc; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 15px; color: var(--text); display: flex; align-items: center; justify-content: center; transition: 0.2s; }
+#theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
 /* Hero */
 .main-wrapper { max-width: 1140px; margin: 0 auto; padding: 20px; }
@@ -57,9 +77,9 @@ body { background: var(--bg); color: var(--text); transition: 0.3s; padding-top:
 .price-item { background: var(--bg); padding: 15px 20px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--accent); }
 .price-item strong { color: var(--accent); font-size: 18px; }
 
-/* Portfolio Filterable */
+/* Portfolio */
 .portfolio-filters { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
-.filter-btn { background: var(--bg); border: 1px solid #ddd; padding: 8px 20px; border-radius: 20px; cursor: pointer; transition: 0.3s; font-weight: 500; }
+.filter-btn { background: var(--bg); border: 1px solid #ddd; padding: 8px 20px; border-radius: 20px; cursor: pointer; transition: 0.3s; font-weight: 500; color: var(--text); }
 .filter-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
 .portfolio-grid-modern { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
 .p-card { position: relative; height: 250px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: 0.4s; }
@@ -75,6 +95,7 @@ body { background: var(--bg); color: var(--text); transition: 0.3s; padding-top:
 .footer-col ul { list-style: none; }
 .footer-col ul li { margin-bottom: 10px; }
 .footer-col ul li a { color: #bbb; text-decoration: none; font-size: 14px; }
+.footer-col p { font-size: 14px; color: #bbb; margin-bottom: 8px; }
 .social-icons { display: flex; gap: 15px; margin-top: 15px; }
 .social-icons a { color: white; font-size: 22px; }
 .footer-bottom { text-align: center; margin-top: 40px; border-top: 1px solid #333; padding-top: 20px; font-size: 12px; color: #666; }
@@ -85,23 +106,19 @@ body { background: var(--bg); color: var(--text); transition: 0.3s; padding-top:
 /* Modals & Lightbox */
 .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 2000; }
 .modal-content { background: var(--card); width: 90%; max-width: 400px; margin: 15% auto; padding: 30px; border-radius: 15px; position: relative; }
-.close { position: absolute; top: 10px; right: 15px; font-size: 25px; cursor: pointer; }
+.close { position: absolute; top: 10px; right: 15px; font-size: 25px; cursor: pointer; color: var(--text); }
 .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 3000; justify-content: center; align-items: center; }
 .lightbox img { max-width: 85%; max-height: 85%; border-radius: 10px; }
 
-/* ბურგერ მენიუს სტილები მობილურისთვის */
+/* Mobile */
 @media (max-width: 768px) {
-    .burger-menu {
-        display: block !important; /* გამოვაჩინოთ ღილაკი */
-        color: var(--primary);
-    }
-
+    .burger-menu { display: block !important; color: var(--primary); }
     .nav-links {
-        display: flex !important; /* display: none-ის ნაცვლად */
+        display: flex !important;
         flex-direction: column;
         position: fixed;
         top: 0;
-        right: -100%; /* ეკრანის გარეთ */
+        right: -100%;
         width: 70%;
         height: 100vh;
         background: var(--card);
@@ -111,21 +128,11 @@ body { background: var(--bg); color: var(--text); transition: 0.3s; padding-top:
         z-index: 999;
         gap: 30px;
     }
-
-    /* როცა მენიუ გახსნილია */
-    .nav-links.active {
-        right: 0;
-    }
-
-    .nav-links a {
-        font-size: 18px;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
-        width: 100%;
-    }
-
+    .nav-links.active { right: 0; }
+    .nav-links a { font-size: 18px; border-bottom: 1px solid #eee; padding-bottom: 10px; width: 100%; }
     .hero-text h1 { font-size: 28px; }
     .hero-text { padding: 30px; text-align: center; }
     .hero-actions { display: flex; flex-direction: column; gap: 10px; }
     .btn-wa-main { margin-left: 0; }
+    .lang-btn { padding: 3px 7px; font-size: 11px; }
 }
